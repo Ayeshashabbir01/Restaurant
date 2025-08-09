@@ -1,0 +1,87 @@
+/* Container styling */
+.reservation-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 40px;
+  background-color: #121212;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+/* Headings */
+.reservation-container h2 {
+  font-size: 2rem;
+  color: #f5c518;
+  margin-bottom: 10px;
+}
+
+.reservation-container p {
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+/* Form styling */
+.reservation-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+/* Input fields */
+.form-group {
+  flex: 1 1 48%;
+  display: flex;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+/* Full width for textarea */
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+/* Inputs, Select, Textarea styling */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 16px;
+  padding-left: 8px;
+}
+
+/* Placeholder text */
+.form-group input::placeholder,
+.form-group textarea::placeholder,
+.form-group select {
+  color: #aaa;
+}
+
+/* Submit button */
+.reserve-btn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  background-color: #f5c518;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.reserve-btn:hover {
+  background-color: #e4b600;
+}

@@ -1,0 +1,59 @@
+.home {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 3rem;
+  color: white;
+}
+
+.home h1 span {
+  color: yellow; /* AySha's Grill yellow */
+}
+
+.home p {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.home-buttons {
+  margin-top: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Make Reservation Button */
+.btn:first-child {
+  background-color: yellow;
+  color: black;
+  border: 2px solid yellow;
+}
+
+/* View Menu Button */
+.btn:last-child {
+  background-color: black;
+  color: yellow;
+  border: 2px solid yellow;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}

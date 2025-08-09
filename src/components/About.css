@@ -1,0 +1,80 @@
+/* Full screen height, dark-themed About section */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 30px;
+  background-color: #111; /* deep black */
+  color: #eee;
+  min-height: 100vh;
+  gap: 30px;
+}
+
+/* Left Column: About Text */
+.about-left {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f1c40f; /* golden yellow */
+}
+
+.about-description {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 25px;
+  line-height: 1.8;
+}
+
+.about-tradition {
+  font-size: 1.1rem;
+  color: #bbb;
+}
+
+/* Highlight key text */
+.highlight {
+  color: #f4e00b;
+  font-weight: bold;
+}
+
+/* Right Column: Quote block */
+.about-right {
+  flex: 1;
+  min-width: 280px;
+  padding: 25px 30px;
+  background-color: #1c1c1c; /* charcoal black */
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.about-right:hover {
+  box-shadow: 0 0 30px rgba(241, 196, 15, 0.15);
+}
+
+/* Quote Icon */
+.quote-icon {
+  font-size: 2.8rem;
+  color: #f9a825; /* yellow icon */
+  margin-bottom: 12px;
+}
+
+/* Quote Title & Text */
+.quote-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #f1c40f;
+  margin-bottom: 10px;
+}
+
+.quote-text {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #f0f0f0;
+  line-height: 1.7;
+}
