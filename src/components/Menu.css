@@ -1,104 +1,130 @@
-.menu-section {
+/* ===== Section Layout ===== */
+.menu-section, .full-menu {
   padding: 60px 20px;
-  background-color: #121212; /* Dark background */
-  text-align: center;
+  background: linear-gradient(to bottom, #121212, #1a1a1a);
+  max-width: 1200px;
+  margin: auto;
   color: #f1f1f1;
 }
 
 .menu-title {
   font-size: 36px;
-  margin-bottom: 10px;
   font-weight: bold;
-  color: #f1c40f; /* Golden-yellow heading */
+  color: #f1c40f;
+  margin-bottom: 8px;
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .menu-subtitle {
   font-size: 18px;
-  margin-bottom: 40px;
   color: #bbbbbb;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
-.menu-category {
-  margin-bottom: 50px;
+/* ===== Menu List ===== */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.menu-category h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #f39c12; /* Yellow-orange subheadings */
-}
-
-.menu-items {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  justify-content: center;
-}
-
+/* ===== Menu Card ===== */
 .menu-card {
-  background: #1e1e1e;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 16px;
   overflow: hidden;
-  text-align: left;
+  padding: 15px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .menu-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(241, 196, 15, 0.2);
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(241, 196, 15, 0.25);
 }
 
-.menu-card img {
-  width: 100%;
-  height: 200px;
+/* ===== Menu Image ===== */
+.menu-img {
+  width: 110px;
+  height: 110px;
   object-fit: cover;
-  border-bottom: 2px solid #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  flex-shrink: 0;
 }
 
-.menu-details {
-  padding: 20px;
+/* ===== Menu Info ===== */
+.menu-info {
+  flex: 1;
+  padding-left: 20px;
+  text-align: left;
 }
 
-.menu-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu-header h4 {
-  margin: 0;
+.menu-name {
   font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
   color: #f1c40f;
 }
 
-.menu-header span {
+.menu-price {
+  font-size: 16px;
   font-weight: bold;
-  color: #2ecc71; /* Price in green */
+  color: #2ecc71;
+  margin-top: 5px;
 }
 
-.menu-details p {
-  margin-top: 10px;
-  color: #ccc;
+.menu-desc {
+  margin-top: 8px;
   font-size: 14px;
+  color: #ccc;
+  line-height: 1.5;
 }
 
+/* ===== Deal Badge ===== */
+.deal-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #e74c3c;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ===== Category Titles ===== */
+.category-title {
+  font-size: 24px;
+  margin: 40px 0 15px;
+  color: #f39c12;
+  text-align: left;
+}
+
+/* ===== View Full Button ===== */
 .view-full {
   margin-top: 40px;
+  text-align: center;
 }
 
 .view-full button {
-  padding: 10px 30px;
-  font-size: 16px;
-  background-color: #f1c40f; /* Golden-yellow button */
-  color: #000;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: 0.3s ease;
+  background: linear-gradient(90deg, #f1c40f, #e1b20f);
+  padding: 12px 32px;
+  border-radius: 30px;
   font-weight: bold;
+  font-size: 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .view-full button:hover {
-  background-color: #d4af37;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(241, 196, 15, 0.3);
 }
