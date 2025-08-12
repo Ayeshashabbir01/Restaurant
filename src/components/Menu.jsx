@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Menu.css';
 
-const Menu = () => {
+const Menu = ({ onSelectItem }) => {
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -28,13 +28,14 @@ const Menu = () => {
       <p className="menu-subtitle">Discover our delicious food</p>
 
       <div className="menu-list">
-        {limitedItems.map((item, idx) => (
-          <div key={idx} className="menu-card">
+        {limitedItems.map((item) => (
+          <div key={item.id} className="menu-card">
             <img src={item.image_url} alt={item.name} className="menu-img" />
             <div className="menu-info">
               <h4 className="menu-name">{item.name}</h4>
               <span className="menu-price">Rs. {item.price}</span>
               <p className="menu-desc">{item.description}</p>
+              <button onClick={() => onSelectItem(item)}>Add to Order</button>
             </div>
           </div>
         ))}

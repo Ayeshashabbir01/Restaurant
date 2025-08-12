@@ -14,13 +14,15 @@ const navItems = [
   { label: "Contact", to: "contact" },
 ];
 
-export default function Navbar() {
+export default function Navbar({ onLogout, isLoggedIn }) {
   const [open, setOpen] = useState(false);
 
   return (
     <header className="navbar">
       <div className="navbar-inner">
-        <div className="brand">🍽️ <span className="brand-text">Restaurant</span></div>
+        <div className="brand">
+          🍽️ <span className="brand-text">Restaurant</span>
+        </div>
 
         <button
           className={`hamburger ${open ? "open" : ""}`}
@@ -40,7 +42,7 @@ export default function Navbar() {
                   to={item.to}
                   spy={true}
                   smooth={true}
-                  offset={-80} // adjust if your navbar height changes
+                  offset={-80}
                   duration={400}
                   onClick={() => setOpen(false)}
                   activeClass="active-link"
@@ -49,6 +51,28 @@ export default function Navbar() {
                 </Link>
               </li>
             ))}
+            {/* Show Logout only if user is logged in */}
+            {isLoggedIn && (
+              <li>
+                <button
+                  onClick={() => {
+                    setOpen(false);
+                    if (onLogout) onLogout();
+                  }}
+                  className="logout-button"
+                  style={{
+                    background: 'transparent',
+                    border: 'none',
+                    color: '#fff',
+                    cursor: 'pointer',
+                    fontSize: '1rem',
+                    padding: '0.5rem 1rem',
+                  }}
+                >
+                  Logout
+                </button>
+              </li>
+            )}
           </ul>
         </nav>
       </div>
