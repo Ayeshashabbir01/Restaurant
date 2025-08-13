@@ -35,7 +35,7 @@ const Menu = ({ onSelectItem }) => {
               <h4 className="menu-name">{item.name}</h4>
               <span className="menu-price">Rs. {item.price}</span>
               <p className="menu-desc">{item.description}</p>
-              <button onClick={() => onSelectItem(item)}>Add to Order</button>
+             
             </div>
           </div>
         ))}

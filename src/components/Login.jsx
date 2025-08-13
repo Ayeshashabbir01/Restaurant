@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Login = ({ onLoginSuccess }) => {
+const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -13,10 +13,13 @@ const Login = ({ onLoginSuccess }) => {
         username,
         password,
       });
+
+      // Store tokens
       localStorage.setItem('access_token', res.data.access);
       localStorage.setItem('refresh_token', res.data.refresh);
+
       setError('');
-      onLoginSuccess();
+      onLogin(); // Trigger login success in App.jsx
     } catch (err) {
       setError('Invalid username or password');
     }
@@ -25,7 +28,7 @@ const Login = ({ onLoginSuccess }) => {
   return (
     <div className="login-form">
       <h2>Login</h2>
-      {error && <p style={{color: 'red'}}>{error}</p>}
+      {error && <p style={{ color: 'red' }}>{error}</p>}
       <form onSubmit={handleSubmit}>
         <input
           type="text"

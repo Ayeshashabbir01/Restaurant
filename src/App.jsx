@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // Routes and Route added
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Element } from 'react-scroll';
 
 import Navbar from './components/Navbar';
@@ -13,18 +13,15 @@ import Footer from './components/Footer';
 import OwnerDashboard from './components/OwnerDashboard';
 import OutletsDashboard from './components/OutletsDashboard';
 import OwnerQRCodeGenerator from './components/OwnerQRCodeGenerator';
-
 import FullMenu from './components/FullMenu';
-
 import Login from './components/Login';
-import OrderForm from './components/OrderForm';
 
 import './App.css';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [orderItems, setOrderItems] = useState([]);
 
+  // Check if token exists on page load
   useEffect(() => {
     const token = localStorage.getItem('access_token');
     if (token) setIsLoggedIn(true);
@@ -38,20 +35,6 @@ const App = () => {
     localStorage.removeItem('access_token');
     localStorage.removeItem('refresh_token');
     setIsLoggedIn(false);
-    setOrderItems([]);
-  };
-
-  const handleSelectItem = (item) => {
-    const existing = orderItems.find(i => i.id === item.id);
-    if (existing) {
-      setOrderItems(orderItems.map(i => i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i));
-    } else {
-      setOrderItems([...orderItems, { ...item, quantity: 1 }]);
-    }
-  };
-
-  const handleOrderSuccess = () => {
-    setOrderItems([]);
   };
 
   if (!isLoggedIn) {
@@ -62,7 +45,6 @@ const App = () => {
     <Router>
       <Navbar onLogout={handleLogout} isLoggedIn={isLoggedIn} />
       <Routes>
-        {/* Main landing page with scroll sections */}
         <Route
           path="/"
           element={
@@ -71,18 +53,7 @@ const App = () => {
               <Element name="qrcode" className="section"><OwnerQRCodeGenerator /></Element>
               <Element name="about" className="section"><About /></Element>
               <Element name="menu" className="section">
-                <Menu onSelectItem={handleSelectItem} />
-                <div style={{ marginTop: '2rem', padding: '1rem', border: '1px solid #ddd', borderRadius: '8px' }}>
-                  <h3>Your Order</h3>
-                  {orderItems.length === 0 ? (
-                    <p>No items added</p>
-                  ) : (
-                    orderItems.map(item => (
-                      <div key={item.id}>{item.name} - Quantity: {item.quantity}</div>
-                    ))
-                  )}
-                  <OrderForm orderItems={orderItems} onOrderSuccess={handleOrderSuccess} />
-                </div>
+                <Menu />
               </Element>
               <Element name="orders" className="section"><Orders /></Element>
               <Element name="owner-dashboard" className="section"><OwnerDashboard /></Element>
@@ -93,8 +64,6 @@ const App = () => {
             </main>
           }
         />
-
-        {/* Full Menu page route */}
         <Route path="/full-menu" element={<FullMenu />} />
       </Routes>
     </Router>
