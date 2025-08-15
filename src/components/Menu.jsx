@@ -1,8 +1,10 @@
+// src/components/Menu.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Menu.css';
 
-const Menu = ({ onSelectItem }) => {
+const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -29,22 +31,26 @@ const Menu = ({ onSelectItem }) => {
 
       <div className="menu-list">
         {limitedItems.map((item) => (
-          <div key={item.id} className="menu-card">
+          <Link
+            key={item.id}
+            to={`/menu/${item.id}`}
+            className="menu-card link-reset"
+            title="View details"
+          >
             <img src={item.image_url} alt={item.name} className="menu-img" />
             <div className="menu-info">
               <h4 className="menu-name">{item.name}</h4>
               <span className="menu-price">Rs. {item.price}</span>
               <p className="menu-desc">{item.description}</p>
-             
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 
       <div className="view-full">
-        <button onClick={() => window.location.href = '/full-menu'}>
-          View Full Menu
-        </button>
+        <Link to="/full-menu">
+          <button>View Full Menu</button>
+        </Link>
       </div>
     </section>
   );

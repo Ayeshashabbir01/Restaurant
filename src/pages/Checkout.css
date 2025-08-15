@@ -1,0 +1,28 @@
+/* src/pages/Checkout.css */
+.checkout-wrap{ padding:20px; color:#fff; background:#000; min-height:100vh; }
+.co-topbar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+.co-grid{ display:grid; gap:14px; grid-template-columns: 1.2fr 1fr; }
+@media (max-width: 900px){ .co-grid{ grid-template-columns:1fr; } }
+
+.co-card{ background:#111; border:1px solid #333; border-radius:12px; padding:14px; }
+.co-card h3{ margin:2px 0 10px; }
+.co-items{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }
+.co-items li{ display:flex; justify-content:space-between; align-items:flex-start; background:#0d0d0d; border:1px solid #2a2a2a; border-radius:10px; padding:10px; }
+.co-items .title{ font-weight:600; }
+.co-items .sub{ color:#bbb; font-size:.92rem; margin-top:3px; }
+.co-items .amount{ font-weight:700; }
+
+.co-total{ margin-top:10px; display:flex; justify-content:space-between; align-items:center; padding-top:10px; border-top:1px dashed #333; }
+.co-pay{ margin-top:14px; }
+.co-pay .row{ display:flex; gap:8px; align-items:center; margin:6px 0; }
+.co-actions{ margin-top:12px; display:flex; gap:8px; }
+
+.btn{ padding:10px 14px; border-radius:10px; border:1px solid #2d2d2d; cursor:pointer; }
+.btn.ghost{ background:#1a1a1a; color:#eee; }
+.btn.primary{ background:teal; border-color:teal; color:#fff; }
+.btn:disabled{ opacity:.6; cursor:not-allowed; }
+
+label{ display:block; margin:8px 0; }
+input, textarea{
+  width:100%; background:#0d0d0d; border:1px solid #333; color:#fff; padding:10px; border-radius:10px; margin-top:6px;
+}

@@ -1,8 +1,9 @@
 .orders-container {
   padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #000; /* black background */
+  color: #fff;
+  min-height: 100vh;
 }
 
 .orders-title {
@@ -21,6 +22,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 15px;
+  margin-bottom: 20px;
 }
 
 .cart-box {
@@ -56,10 +58,6 @@
   cursor: pointer;
 }
 
-.cart-buttons button:hover {
-  background: darkcyan;
-}
+.cart-buttons button:hover { background: darkcyan; }
 
-.recommend-section, .popular-section {
-  margin-top: 30px;
-}
+.recommend-section, .popular-section { margin-top: 30px; }

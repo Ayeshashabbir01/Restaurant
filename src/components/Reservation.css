@@ -1,87 +1,314 @@
-/* Container styling */
-.reservation-container {
-  max-width: 800px;
-  margin: 50px auto;
-  padding: 40px;
+/* Updated MenuItemDetail.css with premium reservation-style look */
+
+.detail-wrap {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 24px;
   background-color: #121212;
-  color: #fff;
-  border-radius: 12px;
+  color: #f1f1f1;
+  border-radius: 14px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  text-align: center;
 }
 
-/* Headings */
-.reservation-container h2 {
-  font-size: 2rem;
-  color: #f5c518;
-  margin-bottom: 10px;
-}
-
-.reservation-container p {
+.back-link {
   color: #ccc;
-  margin-bottom: 30px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.back-link:hover {
+  text-decoration: underline;
 }
 
-/* Form styling */
-.reservation-form {
+.detail-header {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  align-items: flex-start;
   justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 16px;
 }
-
-/* Input fields */
-.form-group {
-  flex: 1 1 48%;
+.dish-title {
+  font-size: 2rem;
+  margin: 0;
+  color: #f5c518;
+}
+.meta-row {
   display: flex;
+  gap: 10px;
   align-items: center;
-  background-color: #1e1e1e;
-  padding: 12px 16px;
-  border-radius: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.pill {
+  background: #1e1e1e;
   border: 1px solid #333;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 12px;
 }
-
-/* Full width for textarea */
-.form-group textarea {
-  height: 100px;
-  resize: vertical;
+.rating {
+  color: #ffd166;
+  font-weight: 600;
 }
-
-/* Inputs, Select, Textarea styling */
-.form-group input,
-.form-group select,
-.form-group textarea {
-  flex: 1;
-  background: transparent;
-  border: none;
-  outline: none;
+.rating-num {
+  color: #ffeaa7;
+  margin-left: 4px;
+}
+.tag.best {
+  background: #16a34a;
   color: #fff;
-  font-size: 16px;
-  padding-left: 8px;
+}
+.tag.chef {
+  background: #f59e0b;
+  color: #111;
 }
 
-/* Placeholder text */
-.form-group input::placeholder,
-.form-group textarea::placeholder,
-.form-group select {
+.gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+}
+.main-img img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 14px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.main-img img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+.thumbs {
+  display: grid;
+  gap: 10px;
+  grid-auto-rows: 120px;
+}
+.thumbs img,
+.thumbs video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #2a2a2a;
+}
+
+.price-desc {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+.price-now {
+  font-size: 28px;
+  color: #22c55e;
+  font-weight: 700;
+}
+.price-old {
+  text-decoration: line-through;
   color: #aaa;
 }
-
-/* Submit button */
-.reserve-btn {
-  margin-top: 20px;
-  width: 100%;
-  padding: 14px;
-  font-size: 16px;
-  background-color: #f5c518;
-  color: #000;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
+.off {
+  background: #ef4444;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
 }
 
-.reserve-btn:hover {
-  background-color: #e4b600;
+.desc h3 {
+  margin: 0 0 6px;
+  color: #f5c518;
+}
+
+.ingredients {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+.ing-list,
+.allergy {
+  margin: 0;
+  padding-left: 18px;
+}
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #f5c518;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.nutrition td {
+  border-bottom: 1px solid #2a2a2a;
+  padding: 10px;
+}
+.nutrition tr td:first-child {
+  color: #bbb;
+}
+
+.serving {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+.chip {
+  background: #1d1d1d;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.custom-cart {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 16px;
+  align-items: center;
+  margin: 22px 0;
+}
+.qty {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  background: #111;
+  border: 1px solid #333;
+  padding: 6px 10px;
+  border-radius: 10px;
+}
+.add,
+.buy {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.add {
+  background: #0ea5e9;
+  color: #fff;
+}
+.buy {
+  background: #f59e0b;
+  color: #000;
+}
+
+.reviews {
+  margin-top: 28px;
+}
+.review {
+  display: flex;
+  gap: 10px;
+  background: #1e1e1e;
+  border: 1px solid #2a2a2a;
+  padding: 12px;
+  border-radius: 12px;
+}
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+}
+.r-head {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #ffd166;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+  background: #0b0b0b;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.sentiment {
+  margin: 26px 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+.donut {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 8px solid #111;
+}
+.legend {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+.lg-pos::before {
+  background: #22c55e;
+}
+.lg-neu::before {
+  background: #eab308;
+}
+.lg-neg::before {
+  background: #ef4444;
+}
+
+.similar {
+  margin-top: 30px;
+}
+.sim-card {
+  text-decoration: none;
+  color: #eee;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+.sim-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+.sim-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+.sim-name {
+  padding: 8px;
+  font-size: 14px;
+}
+.sim-price {
+  padding: 0 8px 10px;
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.notes {
+  margin: 24px 0;
+  color: #bbb;
+  font-size: 14px;
+}
+
+.notes {
+  margin: 24px 0;
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.6; /* text lines ke beech thodi space */
+  padding-bottom: 10px; /* last line ke baad extra space */
 }

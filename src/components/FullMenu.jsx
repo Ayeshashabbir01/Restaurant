@@ -1,6 +1,7 @@
-// FullMenu.jsx
+// src/components/FullMenu.jsx
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Menu.css';
 
 const FullMenu = () => {
@@ -11,7 +12,7 @@ const FullMenu = () => {
     axios.get('http://127.0.0.1:8000/api/menu-items/')
       .then(res => {
         const grouped = {};
-        res.data.forEach(item => {
+        res.data.forEach((item) => {
           const categoryName = item.category?.name || 'Others';
           if (!grouped[categoryName]) grouped[categoryName] = [];
           grouped[categoryName].push(item);
@@ -34,8 +35,8 @@ const FullMenu = () => {
         <div key={idx} className="menu-category">
           <h2 className="category-title">{cat}</h2>
           <div className="menu-list">
-            {categories[cat].map((item, i) => (
-              <div key={i} className="menu-card">
+            {categories[cat].map((item) => (
+              <div key={item.id} className="menu-card">
                 {item.image_url && (
                   <img src={item.image_url} alt={item.name} className="menu-img" />
                 )}
@@ -43,6 +44,13 @@ const FullMenu = () => {
                   <h4 className="menu-name">{item.name}</h4>
                   <span className="menu-price">Rs. {item.price}</span>
                   <p className="menu-desc">{item.description}</p>
+
+                  <div style={{ marginTop: 10 }}>
+                    <Link to={`/menu/${item.id}`}>
+                      <button>View Details</button>
+                    </Link>
+                  </div>
+
                   {item.is_deal && (
                     <span className="deal-badge">
                       {item.discount_percentage}% OFF
