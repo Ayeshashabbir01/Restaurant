@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import "./Navbar.css";
+import { Link as NavigationLink } from "react-router-dom";
 
 const navItems = [
   { label: "Home", to: "home" },
@@ -51,6 +52,20 @@ export default function Navbar({ onLogout, isLoggedIn }) {
                 </Link>
               </li>
             ))}
+            <li key={'register'}>
+                <NavigationLink
+                   to={'/register'}
+                >
+                  Register
+                </NavigationLink>
+              </li>
+              <li key={'login'}>
+                <NavigationLink
+                to={'/login'}
+                >
+                  Login
+                </NavigationLink>
+              </li>
             {/* Show Logout only if user is logged in */}
             {isLoggedIn && (
               <li>

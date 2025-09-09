@@ -22,6 +22,8 @@ import FullMenu from "./components/FullMenu"; // ✅ full menu page
 import MenuDetail from "./pages/MenuItemDetail"; // ✅ menu detail page for each dish
 
 import "./App.css";
+import Register from "./pages/auth/Register";
+import Login from "./pages/auth/Login";
 
 const App = () => {
   return (
@@ -51,7 +53,8 @@ const App = () => {
             />
 
             {/* ✅ Additional pages */}
-            <Route path="/full-menu" element={<FullMenu />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/menu/:id" element={<MenuDetail />} /> {/* dish detail page */}
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-detail/:id" element={<OrderDetail />} />

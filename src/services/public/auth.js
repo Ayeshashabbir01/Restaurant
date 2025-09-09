@@ -13,7 +13,6 @@ export const authApi = publicApi.injectEndpoints({
           profile,
           username: body?.username,
           email: body?.email,
-          user_type: body?.user_type,
           password: body?.password,
         };
         return {
