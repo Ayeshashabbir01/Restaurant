@@ -39,13 +39,13 @@ const App = () => {
               element={
                 <>
                   <Element name="home" className="section"><Home /></Element>
-                  <Element name="qrcode" className="section"><OwnerQRCodeGenerator /></Element>
-                  <Element name="about" className="section"><About /></Element>
-                  <Element name="menu" className="section"><Menu /></Element>
+                  {/* <Element name="qrcode" className="section"><OwnerQRCodeGenerator /></Element> */}
+                  {/* <Element name="about" className="section"><About /></Element> */}
+                  {/* <Element name="menu" className="section"><Menu /></Element> */}
                   <Element name="orders" className="section"><Orders /></Element>
-                  <Element name="owner-dashboard" className="section"><OwnerDashboard /></Element>
-                  <Element name="outlets-dashboard" className="section"><OutletsDashboard /></Element>
-                  <Element name="reservations" className="section"><Reservation /></Element>
+                  {/* <Element name="owner-dashboard" className="section"><OwnerDashboard /></Element> */}
+                  {/* <Element name="outlets-dashboard" className="section"><OutletsDashboard /></Element> */}
+                  {/* <Element name="reservations" className="section"><Reservation /></Element> */}
                   <Element name="contact" className="section"><Contact /></Element>
                   <footer className="section-footer"><Footer /></footer>
                 </>
@@ -53,6 +53,7 @@ const App = () => {
             />
 
             {/* ✅ Additional pages */}
+            <Route path="/home" element={<Register />} />
             <Route path="/register" element={<Register />} />
             <Route path="/login" element={<Login />} />
             <Route path="/menu/:id" element={<MenuDetail />} /> {/* dish detail page */}

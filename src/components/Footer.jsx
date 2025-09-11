@@ -4,14 +4,7 @@ import "./Footer.css";
 
 const footerLinks = [
   { label: "Home", to: "home" },
-  { label: "QR Code", to: "qrcode" },
-  { label: "About", to: "about" },
-  { label: "Menu", to: "menu" },
   { label: "Orders", to: "orders" },
-  { label: "Owner Dashboard", to: "owner-dashboard" },
-  { label: "Outlets Dashboard", to: "outlets-dashboard" },
-  { label: "Reservations", to: "reservations" },
-  { label: "Contact", to: "contact" },
 ];
 
 const Footer = () => {

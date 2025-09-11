@@ -110,7 +110,7 @@ const Menu = () => {
   const limitedItems = menuItems.slice(0, 4);
 
   return (
-    <section className="menu-section">
+    <section className="w-full bg-[#111] py-6">
       <h2 className="menu-title">Our Menu</h2>
       <p className="menu-subtitle">Discover our delicious food</p>
 

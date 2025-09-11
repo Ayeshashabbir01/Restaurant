@@ -37,7 +37,7 @@ export default function Navbar({ onLogout, isLoggedIn }) {
 
         <nav className={`nav-links ${open ? "show" : ""}`}>
           <ul>
-            {navItems.map((item) => (
+            {/* {navItems.map((item) => (
               <li key={item.to}>
                 <Link
                   to={item.to}
@@ -51,7 +51,14 @@ export default function Navbar({ onLogout, isLoggedIn }) {
                   {item.label}
                 </Link>
               </li>
-            ))}
+            ))} */}
+            <li key={'register'}>
+                <NavigationLink
+                   to={'/'}
+                >
+                  Home
+                </NavigationLink>
+              </li>
             <li key={'register'}>
                 <NavigationLink
                    to={'/register'}
