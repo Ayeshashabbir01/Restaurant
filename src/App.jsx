@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import Orders from "./pages/Orders";
 import Reservation from "./components/Reservation";
 import About from "./components/About";
+import Restaurants from "./components/restaurants/Restaurants";
 import Menu from "./components/Menu";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -24,6 +25,7 @@ import MenuDetail from "./pages/MenuItemDetail"; // ✅ menu detail page for eac
 import "./App.css";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
+import RestaurantsMenu from "./pages/menu/RestaurantsMenu";
 
 const App = () => {
   return (
@@ -42,6 +44,7 @@ const App = () => {
                   {/* <Element name="qrcode" className="section"><OwnerQRCodeGenerator /></Element> */}
                   {/* <Element name="about" className="section"><About /></Element> */}
                   {/* <Element name="menu" className="section"><Menu /></Element> */}
+                  <Element name="restaurants" className="section"><Restaurants /></Element>
                   <Element name="orders" className="section"><Orders /></Element>
                   {/* <Element name="owner-dashboard" className="section"><OwnerDashboard /></Element> */}
                   {/* <Element name="outlets-dashboard" className="section"><OutletsDashboard /></Element> */}
@@ -59,6 +62,7 @@ const App = () => {
             <Route path="/menu/:id" element={<MenuDetail />} /> {/* dish detail page */}
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/order-detail/:id" element={<OrderDetail />} />
+            <Route path="/:id/menu/" element={<RestaurantsMenu />} />
             <Route path="/order-history" element={<OrderHistory />} />
           </Routes>
         </main>
