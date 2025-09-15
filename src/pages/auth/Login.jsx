@@ -48,10 +48,10 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#111] py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex items-center justify-center !bg-[#F6F6F6] py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-[#ffcc00]">
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-[#004F99]">
             Sign in to your account
           </h2>
         </div>
@@ -99,7 +99,7 @@ const Login = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#ffcc00] hover:bg-[#cdb144] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#01411C] hover:bg-[#026e2f] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
             >
               {isLoading ? "Signing in..." : "Sign in"}
             </button>
@@ -108,7 +108,7 @@ const Login = () => {
           <div className="text-center">
             <Link
               to="/register"
-              className="font-medium text-[#ffcc00] hover:text-[#cdb144]"
+              className="font-medium text-[#004F99] hover:text-[#004484]"
             >
               Don't have an account? Sign up
             </Link>

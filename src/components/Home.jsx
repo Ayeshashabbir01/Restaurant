@@ -4,10 +4,10 @@ import "./Home.css";
 
 function Home() {
   return (
-    <section id="home" className="home">
-      <div className="home-content">
+    <section id="home" className="home !p-0 !m-0 bg-[url('/assets/images/hero-banner.jpg')] bg-center bg-cover">
+      <div className="home-content bg-black/70 w-full p-16">
         <h1>
-          Welcome to <span>AySha's Grill</span>
+          Welcome to <span>Easy Serve</span>
         </h1>
         <p>
           Experience culinary excellence in an atmosphere of refined elegance

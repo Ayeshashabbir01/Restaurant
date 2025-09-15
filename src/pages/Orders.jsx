@@ -156,14 +156,19 @@ export default function Orders() {
   const handleProceedToCheckout = () => navigate("/checkout");
 
   return (
-    <div className="orders-container">
-      <h2 className="orders-title">Menu</h2>
-      <p className="orders-subtitle">
+    <div className="orders-container !bg-[#F6F6F6] !py-20">
+      <h1
+        className="text-5xl font-bold text-center mb-8"
+        style={{ color: "#004F99" }}
+      >
+        Our Restaurants
+      </h1>
+      <p className="orders-subtitle !text-gray-600">
         Enjoy our exquisite cuisine from the comfort of your home
       </p>
 
       <div>
-        <h3 className=" text-3xl text-[#ffcc00] font-bold mt-10 mb-4">
+        <h3 className=" text-4xl text-[#01411C] font-bold mt-10 mb-4">
           Menu Items
         </h3>
         <div className="items-grid">
@@ -182,7 +187,7 @@ export default function Orders() {
       {/* {recommended.length > 0 && ( */}
       {mainItems.length > 0 && (
         <div className="recommend-section">
-          <h3 className=" text-3xl text-[#ffcc00] font-bold mt-10 mb-4">
+          <h3 className=" text-4xl text-[#01411C] font-bold mt-10 mb-4">
             Recommended For You
           </h3>
           <div className="items-grid">
@@ -202,7 +207,7 @@ export default function Orders() {
       {/* {mostPopular.length > 0 && ( */}
       {mainItems.length > 0 && (
         <div className="popular-section">
-          <h3 className=" text-3xl text-[#ffcc00] font-bold mt-10 mb-4">
+          <h3 className="text-4xl text-[#01411C] font-bold mt-10 mb-4">
             Most Popular Dishes
           </h3>
           <div className="items-grid">
@@ -221,16 +226,16 @@ export default function Orders() {
 
       <div className=" w-full flex items-center justify-center my-8">
         <Link to={'/#'}>
-          <button className=" rounded-3xl bg-orange-400 text-white px-10">
+          <button className=" rounded-3xl bg-[#01411C] text-white px-10 shadow-md">
             View Full Menu
           </button>
         </Link>
       </div>
 
-      <div className="cart-box">
-        <h3>Your Order</h3>
+      <div className="cart-box !text-black !bg-gray-100 !border-[#ffcc00] shadow-md">
+        <h3 className=" text-2xl font-semibold text-[#01411C]">Your Order</h3>
         {cart.length === 0 ? (
-          <p>Your cart is empty</p>
+          <p className=" text-black">Your cart is empty</p>
         ) : (
           <>
             <ul>
@@ -240,10 +245,10 @@ export default function Orders() {
                 </li>
               ))}
             </ul>
-            <p className="total">Total: Rs. {getTotal()}</p>
+            <p className="total !text-black">Total: Rs. {getTotal()}</p>
             <div className="cart-buttons">
-              <button onClick={() => clearCart()}>Clear Cart</button>
-              <button onClick={handleProceedToCheckout}>
+              <button className=" !bg-[#004F99]" onClick={() => clearCart()}>Clear Cart</button>
+              <button className="!bg-[#004F99]" onClick={handleProceedToCheckout}>
                 Proceed to Checkout
               </button>
             </div>

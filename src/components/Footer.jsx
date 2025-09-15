@@ -9,12 +9,12 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer !bg-[#01411C]">
       <div className="footer-content">
         
         {/* Left - Brand & Description */}
         <div className="footer-section about">
-          <h2>AySha's Grill</h2>
+          <h2 className=" text-lg font-bold">Easy Serve</h2>
           <p>
             Experience culinary excellence in an atmosphere of refined elegance.
           </p>
@@ -22,7 +22,7 @@ const Footer = () => {
 
         {/* Center - Quick Links */}
         <div className="footer-section links">
-          <h3>Quick Links</h3>
+          <h3 className=" text-lg font-bold">Quick Links</h3>
           <ul>
             {footerLinks.map((item) => (
               <li key={item.to}>
@@ -42,7 +42,7 @@ const Footer = () => {
 
         {/* Right - Newsletter */}
         <div className="footer-section newsletter">
-          <h3>Newsletter</h3>
+          <h3 className=" text-lg font-bold">Newsletter</h3>
           <p>
             Subscribe to receive updates about special events and new menu items.
           </p>
@@ -55,7 +55,7 @@ const Footer = () => {
 
       {/* Bottom Footer */}
       <div className="footer-bottom">
-        <p>© 2024 AySha's Grill Restaurant. All rights reserved.</p>
+        <p>© 2024 Easy Serve Restaurant. All rights reserved.</p>
       </div>
     </footer>
   );

@@ -19,10 +19,10 @@ export default function Navbar({ onLogout, isLoggedIn }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="navbar">
+    <header className="navbar !bg-[#01411C]">
       <div className="navbar-inner">
         <div className="brand">
-          🍽️ <span className="brand-text">Restaurant</span>
+          <img src="/assets/images/logo.jpeg" alt="" className=" w-10 h-10" /> <span className="brand-text !text-[#F6F6F6]">Restaurant</span>
         </div>
 
         <button
@@ -55,6 +55,7 @@ export default function Navbar({ onLogout, isLoggedIn }) {
             <li key={'register'}>
                 <NavigationLink
                    to={'/'}
+                   className=" !text-[#F6F6F6]"
                 >
                   Home
                 </NavigationLink>
@@ -62,6 +63,7 @@ export default function Navbar({ onLogout, isLoggedIn }) {
             <li key={'register'}>
                 <NavigationLink
                    to={'/register'}
+                   className=" !text-[#F6F6F6]"
                 >
                   Register
                 </NavigationLink>
@@ -69,6 +71,7 @@ export default function Navbar({ onLogout, isLoggedIn }) {
               <li key={'login'}>
                 <NavigationLink
                 to={'/login'}
+                className=" !text-[#F6F6F6]"
                 >
                   Login
                 </NavigationLink>

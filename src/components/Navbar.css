@@ -45,17 +45,18 @@
   text-decoration: none;
   cursor: pointer;
   padding: 6px 4px;
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .nav-links a:hover {
   color: #fff;
-  border-bottom: 2px solid #ffcc00;
+  border-bottom: 2px solid #F6F6F6;
 }
 
 .active-link {
   color: #fff !important;
-  border-bottom: 2px solid #ffcc00;
+  border-bottom: 2px solid white;
 }
 
 /* hamburger (mobile) */

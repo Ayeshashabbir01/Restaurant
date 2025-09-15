@@ -8,10 +8,10 @@ function Restaurants() {
   console.log("restaurants");
 
   return (
-    <div className="min-h-screen bg-black p-6">
+    <div className="min-h-screen bg-[#F6F6F6] p-6 pt-20">
       <h1
-        className="text-3xl font-bold text-center mb-8"
-        style={{ color: "#ffcc00" }}
+        className="text-5xl font-bold text-center mb-8"
+        style={{ color: "#004F99" }}
       >
         Our Restaurants
       </h1>
@@ -20,13 +20,13 @@ function Restaurants() {
           <div
             key={restaurant.id}
             className="rounded-lg shadow-lg  w-fit"
-            style={{ backgroundColor: "#111" }}
+            style={{ backgroundColor: "white" }}
           >
             {/* Restaurant Image Placeholder */}
             <div className="h-48 flex items-center justify-center">
               <svg
                 className="w-20 h-20"
-                style={{ color: "#cdb144" }}
+                style={{ color: "#ffcc00" }}
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -37,12 +37,12 @@ function Restaurants() {
             <div className="p-6">
               <h2
                 className="text-xl font-bold mb-2"
-                style={{ color: "#ffcc00" }}
+                style={{ color: "black" }}
               >
                 {restaurant.name}
               </h2>
 
-              <p className="mb-4 break-words text-wrap w-80" style={{ color: "white" }}>
+              <p className="mb-4 break-words text-wrap w-80" style={{ color: "black" }}>
                 {restaurant.description}
               </p>
 
@@ -68,7 +68,7 @@ function Restaurants() {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  <span style={{ color: "white" }}>{restaurant.address}</span>
+                  <span style={{ color: "black" }}>{restaurant.address}</span>
                 </div>
 
                 <div className="flex items-center">
@@ -86,7 +86,7 @@ function Restaurants() {
                       d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                     />
                   </svg>
-                  <span style={{ color: "white" }}>
+                  <span style={{ color: "black" }}>
                     {restaurant.phone_number}
                   </span>
                 </div>
@@ -96,14 +96,14 @@ function Restaurants() {
                 to={`/${restaurant.id}/menu`}
                 className="block w-full py-2 text-center font-semibold rounded transition-colors duration-300"
                 style={{
-                  backgroundColor: "#ffcc00",
-                  color: "black",
+                  backgroundColor: "#01411C",
+                  color: "white",
                 }}
                 onMouseOver={(e) => {
-                  e.target.style.backgroundColor = "#cdb144";
+                  e.target.style.backgroundColor = "#026e2f";
                 }}
                 onMouseOut={(e) => {
-                  e.target.style.backgroundColor = "#ffcc00";
+                  e.target.style.backgroundColor = "#01411C";
                 }}
               >
                 View Menu
