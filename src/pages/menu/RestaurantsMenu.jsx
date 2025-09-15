@@ -9,10 +9,10 @@ function RestaurantsMenu() {
   const { data } = useGetRestaurantMenusQuery(id, { skip: !id });
 
   return (
-    <div className=" w-full mt-28 p-10">
+    <div className=" w-full pt-28 p-10 !bg-[#F6F6F6]">
       {data?.results?.map((menu) => (
         <div>
-          <h2 className=" text-3xl font-bold text-[#ffcc00]">{menu.name}</h2>
+          <h2 className=" text-3xl font-bold text-[#004F99]">{menu.name}</h2>
           <div className=" mt-10">
             <RestaurantsMenuItems menu={menu?.menu_items} />
           </div>
